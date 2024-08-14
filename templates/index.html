@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Disease Prediction System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="bg-light-gray">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-deep-blue py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-white text-2xl font-bold">Lung Disease Prediction</a>
+            <div class="space-x-4">
+                <a href="#input" class="text-white hover:text-turquoise">Input Data</a>
+                <a href="#contact" class="text-white hover:text-turquoise">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-cover bg-center h-screen" style="background-image: url('https://images.unsplash.com/photo-1555708982-8645ec9ce3cc?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+            <div class="text-center text-white p-8">
+                <h1 class="text-5xl font-bold mb-4">Lung Disease Prediction System</h1>
+                <p class="text-xl mb-8">Get accurate predictions and insights into lung disease based on your input data.</p>
+                <a href="#input" class="button">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-deep-blue mb-8">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="icon mb-4 text-4xl text-deep-blue">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Accurate Predictions</h3>
+                    <p>Receive reliable predictions based on advanced algorithms and data analysis.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="icon mb-4 text-4xl text-deep-blue">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Detailed Insights</h3>
+                    <p>Get detailed insights into the factors contributing to lung disease and potential risks.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="icon mb-4 text-4xl text-deep-blue">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Comprehensive Information</h3>
+                    <p>Access a wealth of information on lung disease, including causes, effects, and treatments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-turquoise">
+        <div class="container mx-auto text-center text-white">
+            <h2 class="text-4xl font-bold mb-8">About Us</h2>
+            <p class="text-xl">We are dedicated to providing accurate and actionable insights into lung disease to improve health outcomes and enhance quality of life.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-deep-blue py-10 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <h3 class="text-xl font-bold">Contact Us</h3>
+                <p>Email: support@lungdiseaseprediction.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-turquoise"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-turquoise"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-turquoise"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

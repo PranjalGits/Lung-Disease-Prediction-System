@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data - Lung Disease Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="bg-light-gray">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-deep-blue py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-white text-2xl font-bold">Lung Disease Prediction</a>
+            <div class="space-x-4">
+                <a href="#input" class="text-white hover:text-turquoise">Input Data</a>
+                <a href="#contact" class="text-white hover:text-turquoise">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Input Form Section -->
+    <section id="input" class="py-20">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-deep-blue mb-8">Enter Patient Information</h2>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <form action="/input" method="POST">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="mb-6">
+                            <label for="age" class="block text-deep-blue font-semibold mb-2">Age</label>
+                            <input type="number" name="age" id="age" placeholder="Enter Age" class="input" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="gender" class="block text-deep-blue font-semibold mb-2">Gender</label>
+                            <select name="gender" id="gender" class="input" required>
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="1">Male</option>
+                                <option value="0">Female</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="total_bilirubin" class="block text-deep-blue font-semibold mb-2">Total Bilirubin</label>
+                            <input type="number" step="0.01" name="total_bilirubin" id="total_bilirubin" placeholder="Enter Total Bilirubin" class="input" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="direct_bilirubin" class="block text-deep-blue font-semibold mb-2">Direct Bilirubin</label>
+                            <input type="number" step="0.01" name="direct_bilirubin" id="direct_bilirubin" placeholder="Enter Direct Bilirubin" class="input" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="alkaline_phosphotase" class="block text-deep-blue font-semibold mb-2">Alkaline Phosphotase</label>
+                            <input type="number" name="alkaline_phosphotase" id="alkaline_phosphotase" placeholder="Enter Alkaline Phosphotase" class="input" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="alamine_aminotransferase" class="block text-deep-blue font-semibold mb-2">Alamine Aminotransferase</label>
+                            <input type="number" name="alamine_aminotransferase" id="alamine_aminotransferase" placeholder="Enter Alamine Aminotransferase" class="input" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="aspartate_aminotransferase" class="block text-deep-blue font-semibold mb-2">Aspartate Aminotransferase</label>
+                            <input type="number" name="aspartate_aminotransferase" id="aspartate_aminotransferase" placeholder="Enter Aspartate Aminotransferase" class="input" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="total_proteins" class="block text-deep-blue font-semibold mb-2">Total Proteins</label>
+                            <input type="number" step="0.01" name="total_proteins" id="total_proteins" placeholder="Enter Total Proteins" class="input" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="albumin" class="block text-deep-blue font-semibold mb-2">Albumin</label>
+                            <input type="number" step="0.01" name="albumin" id="albumin" placeholder="Enter Albumin" class="input" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="albumin_globulin_ratio" class="block text-deep-blue font-semibold mb-2">Albumin and Globulin Ratio</label>
+                            <input type="number" step="0.01" name="albumin_globulin_ratio" id="albumin_globulin_ratio" placeholder="Enter Albumin and Globulin Ratio" class="input" required>
+                        </div>
+                    </div>
+                    {% if error %}
+                    <p class="text-red-500 text-center mt-4">{{ error }}</p>
+                    {% endif %}
+                    <div class="text-center">
+                        <button type="submit" class="button mt-4">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-deep-blue py-10 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <h3 class="text-xl font-bold">Contact Us</h3>
+                <p>Email: support@lungdiseaseprediction.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-turquoise"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-turquoise"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-turquoise"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
